@@ -231,96 +231,7 @@ except Exception as e:
 - [ ] Web UI accessible at `http://localhost:5000`
 - [ ] Recording device ready (for demo video)
 
----
 
-## 🎬 Recording Tips
-
-### Equipment Needed
-- Smartphone (to receive the call)
-- Screen recording software (OBS, ScreenFlow, QuickTime, etc.)
-- Headphones (to hear audio from the app)
-
-### Screen Recording (Windows)
-1. **Built-in Snipping Tool with video:**
-   - Win + Shift + S → Select "Video" mode
-
-2. **OBS Studio** (Free):
-   - Download: https://obsproject.com/
-   - Create scene with browser window + audio input
-   - Start recording, then make call
-
-### Talking Points Script
-
-**[00:00-00:30] Introduction**
-```
-"Hi, this is a demo of the InspireWorks Plivo IVR system. 
-The system demonstrates voice API integration with Plivo, 
-featuring OTP authentication and multi-level interactive menus. 
-Let me show you how it works."
-```
-
-**[00:30-01:00] Making the Call**
-```
-"I'll trigger an outbound call from our Plivo number 
-to my phone using this web interface."
-[Click "Make Call" button]
-"As you can see, the call is initiated. 
-Let me answer it on my phone."
-```
-
-**[01:00-02:00] OTP Authentication**
-```
-"The IVR is now prompting me to enter a 4-digit OTP, 
-which is my birthdate in DDMM format. 
-Let me try entering the wrong OTP first to show the re-prompting."
-[Press wrong digits]
-"Notice the bot rejected my input and asked me to try again. 
-Now let me enter the correct OTP."
-[Press correct digits]
-"Great! I'm now authenticated and the system is welcoming me."
-```
-
-**[02:00-02:30] Language Selection**
-```
-"The system now asks me to select my language. 
-I can choose 1 for English or 2 for Spanish. 
-Let me select English."
-[Press 1]
-```
-
-**[02:30-03:30] Audio Playback**
-```
-"Now I'm on the action menu. I can press 1 to hear an audio message 
-or press 2 to connect to a live associate. 
-Let me select 1 to hear the audio message."
-[Press 1]
-"The system is now playing an audio file. 
-As you can hear, the audio is playing successfully. 
-After the audio finishes, the call will hang up gracefully."
-[Wait for audio to finish]
-```
-
-**[03:30-05:00] Call Transfer Demo (Optional)**
-```
-"Let me make another call to demonstrate the transfer feature."
-[Repeat call → OTP → Language → Press 2 for transfer]
-"Notice the system is connecting me to the live associate number. 
-If an associate were available, the call would be connected. 
-In a production environment, this could be a real support agent."
-```
-
-**[04:30-05:00] Closing**
-```
-"This demo showcases the key features of the Plivo IVR:
-- Secure OTP authentication with re-prompting
-- Multi-level interactive menus
-- Bilingual support (English and Spanish)
-- Audio playback
-- Intelligent call routing
-Thank you for watching!"
-```
-
----
 
 ## 🚀 Production Deployment
 
@@ -370,30 +281,7 @@ heroku config:set BASE_URL=https://your-app-name.herokuapp.com
 
 ---
 
-## ✅ Final Verification
-
-Run through the complete flow one more time:
-
-1. **Call Initiated** ✅
-2. **OTP Wrong** ✅
-3. **OTP Correct** ✅
-4. **Language Selected** ✅
-5. **Action Executed** (audio or transfer) ✅
-6. **Call Ended Gracefully** ✅
-7. **No Errors in Logs** ✅
-
-You're ready to submit! 🎉
-
 ---
-
-## 📝 Deliverables Summary
-
-- [ ] **Working Application** — `app.py` with all features
-- [ ] **Code Repository** — With this README + guides
-- [ ] **Setup Instructions** — In `README.md` and `SETUP_GUIDE.md`
-- [ ] **Credentials** — Stored securely (not in repo)
-- [ ] **Demo Video** — 3-5 min showing full flow
-- [ ] **All Tests Pass** — Using test checklist above
 
 **Submission Package:**
 ```
@@ -407,4 +295,3 @@ plivo-ivr/
 └── demo_video.mp4
 ```
 
-Good luck! 🚀📞
