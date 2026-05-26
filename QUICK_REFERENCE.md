@@ -86,7 +86,7 @@ CALL ANSWERED
     └─ 2: Spanish → [MENU_ES]
 [MENU] Press 1 or 2
     ├─ 1: Play audio → Hang up
-    └─ 2: Transfer → Route to 02264236412
+    └─ 2: Transfer → Route to the Live associate
 ```
 
 ### Test Script (Step-by-Step)
@@ -109,23 +109,8 @@ plivo-ivr/
 ├── README.md              ← Complete documentation
 ├── SETUP_GUIDE.md         ← Detailed setup instructions
 └── QUICK_REFERENCE.md     ← This file
+
 ```
-
----
-
-## 🔑 Plivo Credentials
-
-| Name | Value |
-|------|-------|
-| **Auth ID** | YOUR_PLIVO_AUTH_ID |
-| **Auth Token** | YOUR_PLIVO_AUTH_TOKEN |
-| **Plivo Number** | +912264232030 |
-| **Associate Number** | 02264236412 |
-
-> ⚠️ **Security**: Store in environment variables before public deployment
-
----
-
 ## 🌐 API Endpoints
 
 | GET/POST | Purpose | Query Params |
@@ -139,7 +124,7 @@ plivo-ivr/
 | `/ivr/menu` | Action menu | `lang=en\|es` |
 | `/ivr/menu_select` | Action handler | `Digits=1\|2`, `lang=en\|es` |
 
----
+```
 
 ## 🎤 Prompts (Exact Text)
 
@@ -175,16 +160,6 @@ plivo-ivr/
 | DTMF not recognized | Wait for voice prompt, press digits slowly |
 | Audio won't play | Verify audio URL is publicly accessible |
 | "No input received" | You took too long (10 sec timeout) |
-
----
-
-## 📝 Important Numbers
-
-| Purpose | Number | Notes |
-|---------|--------|-------|
-| **Calling From** | +912264232030 | Plivo number |
-| **Transfer To** | 02264236412 | Live associate (test number) |
-| **Your Number** | +91XXXXXXXXXX | Where you receive the call |
 
 ---
 
