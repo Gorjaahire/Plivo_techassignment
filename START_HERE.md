@@ -2,7 +2,7 @@
 
 ## 🎉 Status: READY FOR DEPLOYMENT
 
-Your **Plivo IVR system** is **100% implemented**, **fully tested**, and **ready for production**.
+The **Plivo IVR system** is **100% implemented**, **fully tested**, and **ready for production**.
 
 ---
 
@@ -28,9 +28,9 @@ Your **Plivo IVR system** is **100% implemented**, **fully tested**, and **ready
 
 ### ✅ Configuration
 
-- **OTP Secret**: Hardcoded to "1503" (you'll update with your birthdate)
-- **Plivo Number**: +912264232030 (caller ID)
-- **Associate Number**: 02264236412 (transfer destination)
+- **OTP Secret**: Hardcoded to "1503" (update with birthdate)
+- **Plivo Number**: +91xxxxxxxxxx (caller ID)
+- **Associate Number**: xxxxxxxxxx(transfer destination)
 - **Audio URL**: SoundHelix example MP3 (publicly accessible)
 - **Base URL**: http://localhost:5000 (you'll update with ngrok URL)
 
@@ -164,24 +164,7 @@ You should see a form with:
 
 ---
 
-## 🎬 Demo Video (10-15 minutes to record)
 
-### What to Show
-
-1. **Web UI** → Enter phone → Make call
-2. **OTP Authentication** → Wrong OTP (re-prompt) → Correct OTP (verified)
-3. **Language Selection** → Press 1 for English (or 2 for Spanish)
-4. **Audio Playback** → Press 1 → Hear audio → Call ends
-5. **Call Transfer** (Optional) → Press 2 → Transfer to associate
-
-### Recording Tips
-
-- Use OBS, ScreenFlow, or built-in screen recording
-- Ensure system audio is captured
-- Speak clearly (narrate what you're doing)
-- Total: 3-5 minutes
-
----
 
 ## 📁 Your Project Files
 
@@ -247,30 +230,7 @@ Everything implemented and ready to test:
 
 ---
 
-## 🎯 Recommended Next Steps
 
-### 🏃 Quick Path (30 min total)
-1. Update OTP (1 min)
-2. Start ngrok (1 min)
-3. Update BASE_URL (1 min)
-4. Restart Flask (1 min)
-5. Test locally (5 min)
-6. Record demo (15 min)
-7. Package & submit (5 min)
-
-### 📚 Learning Path (1-2 hours)
-1. Read [SETUP_GUIDE.md](SETUP_GUIDE.md) for detailed understanding
-2. Run through each test scenario manually
-3. Explore the code to understand how it works
-4. Deploy to ngrok/production
-
-### 🚀 Deployment Path
-1. Follow [DEPLOYMENT_CHECKLIST.md](DEPLOYMENT_CHECKLIST.md)
-2. Choose deployment option from [TESTING_GUIDE.md](TESTING_GUIDE.md)
-3. Set environment variables securely
-4. Deploy and monitor
-
----
 
 ## ⚡ Command Quick Reference
 
@@ -298,14 +258,6 @@ curl "http://localhost:5000/make_call?to=%2B91XXXXXXXXXX"
 python -c "import plivo; print('✅ OK')"
 ```
 
----
-
-## 🔐 Security Notes
-
-- ✅ Credentials are environment-variable friendly
-- ✅ No credentials hardcoded in version control
-- ⚠️ DO update `.gitignore` before pushing to GitHub
-- ⚠️ DO store sensitive values in `.env` file (not in git)
 
 Example `.env` file (never commit):
 ```
@@ -357,7 +309,7 @@ python -m py_compile app.py
 
 ---
 
-## ✨ What You're Submitting
+## What the demo is about:
 
 ```
 PROJECT PACKAGE:
@@ -436,16 +388,7 @@ By completing this project, you've learned:
 **Generated**: May 26, 2026  
 **Project**: InspireWorks Plivo IVR Demo  
 **Status**: ✅ READY FOR DEPLOYMENT  
-**Estimated Submission Time**: 45 minutes  
 
-**Good luck! 🚀📞**
-
----
-
-## ⏱️ Timeline
-
-```
-NOW:     Update OTP, ngrok, BASE_URL, restart Flask
 +5min:   Verify it works
 +15min:  Record demo video
 +45min:  Package and submit
