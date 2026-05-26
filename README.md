@@ -7,7 +7,7 @@ A Flask-based multi-level IVR system with OTP authentication built on Plivo's Vo
 ## 📞 Call Flow
 
 ```
-Outbound Call (from +91 22 6423 2030)
+Outbound Call (from live associate)
     ↓
 OTP Prompt (4-digit DDMM birthdate)
     ├─ Wrong OTP → Re-prompt
@@ -19,7 +19,7 @@ Level 1: Language Selection
             ↓
 Level 2: Action Menu
     ├─ Press 1 → Play audio message
-    └─ Press 2 → Transfer to live associate (+91 2264236412)
+    └─ Press 2 → Transfer to live associate 
 ```
 
 ---
@@ -31,8 +31,8 @@ Level 2: Action Menu
 - Plivo Account with:
   - **Auth ID**: `YOUR_PLIVO_AUTH_ID`
   - **Auth Token**: `YOUR_PLIVO_AUTH_TOKEN`
-  - **Plivo Number**: `+91 22 6423 2030`
-  - **Associate Number**: `02264236412`
+  - **Plivo Number**: `+91 xxxxxxxxxx`
+  - **Associate Number**: `xxxxxxxxxx`
 
 ---
 
@@ -77,8 +77,8 @@ Copy the `https://xxxx.ngrok.io` URL — you'll need it as `BASE_URL`.
 ```bash
 export PLIVO_AUTH_ID="YOUR_PLIVO_AUTH_ID"
 export PLIVO_AUTH_TOKEN="YOUR_PLIVO_AUTH_TOKEN"
-export PLIVO_NUMBER="+912264232030"
-export ASSOCIATE_NUMBER="02264236412"
+export PLIVO_NUMBER="+91xxxxxxxxxx"
+export ASSOCIATE_NUMBER="xxxxxxxxxx"
 export BASE_URL="https://xxxx.ngrok.io"   # ← your ngrok URL
 export TO_NUMBER="+91XXXXXXXXXX"          # optional default destination
 ```
@@ -111,7 +111,7 @@ curl "http://localhost:5000/make_call?to=+91XXXXXXXXXX"
 import plivo
 client = plivo.RestClient("YOUR_PLIVO_AUTH_ID", "YOUR_PLIVO_AUTH_TOKEN")
 client.calls.create(
-    from_="+912264232030",
+    from_="+91xxxxxxxxxx",
     to_="+91XXXXXXXXXX",
     answer_url="https://xxxx.ngrok.io/ivr/otp",
     answer_method="GET",
@@ -141,8 +141,8 @@ client.calls.create(
 |---|---|
 | Auth ID | `YOUR_PLIVO_AUTH_ID` |
 | Auth Token | `YOUR_PLIVO_AUTH_TOKEN` |
-| Plivo Number | `+912264232030` |
-| Live Associate | `02264236412` |
+| Plivo Number | `+91xxxxxxxxxx` |
+| Live Associate | `xxxxxxxxxx` |
 
 > **Security note:** Move credentials to environment variables or a `.env` file before committing to a public repository.
 
@@ -213,7 +213,7 @@ plivo-ivr/
    - Click **Make Call**
 
 3. **Answer the Call:**
-   - Your phone rings from Plivo number `+91 22 6423 2030`
+   - Your phone rings from Plivo number `+91 xxxxxxxxxx`
    - Answer the call
 
 4. **OTP Authentication:**
@@ -232,7 +232,7 @@ plivo-ivr/
    - Spanish: "Seleccione una opción. Presione 1 para escuchar un mensaje de audio. Presione 2 para hablar con un asociado."
    - Press **1** to hear audio
    - Bot plays a message, then audio, then hangs up
-   - OR Press **2** to transfer to live associate (`02264236412`)
+   - OR Press **2** to transfer to live associate (`xxxxxxxxxx`)
 
 ---
 
