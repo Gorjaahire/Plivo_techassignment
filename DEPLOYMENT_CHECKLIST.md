@@ -2,7 +2,7 @@
 
 ## ✅ Implementation Status: 100% Complete
 
-Your Plivo IVR system is **fully implemented** and **currently running**.
+The Plivo IVR system is **fully implemented** and **currently running**.
 
 ```
 SYSTEM STATUS: ✅ OPERATIONAL
@@ -17,7 +17,7 @@ SYSTEM STATUS: ✅ OPERATIONAL
 
 ## 📋 Pre-Deployment Steps
 
-### Step 1: Update Your OTP (CRITICAL ⚠️)
+### Step 1: Update  OTP 
 
 **File**: `app.py` | **Line**: 20
 
@@ -43,7 +43,7 @@ Wait for output like:
 Forwarding     https://abc123def456.ngrok.io -> http://localhost:5000
 ```
 
-**Copy the HTTPS URL** (yours will be different from the example)
+**Copy the HTTPS URL** 
 
 ### Step 3: Update BASE_URL
 
@@ -93,7 +93,7 @@ python -c "import plivo; client = plivo.RestClient('YOUR_PLIVO_AUTH_ID', 'YOUR_P
 
 ---
 
-## 🚀 Ready to Deploy?
+## 🚀 Deploy-ready
 
 ### Option A: Local Testing (Recommended First)
 
@@ -143,65 +143,8 @@ heroku config:set BASE_URL=https://your-app-name.herokuapp.com
 
 1. Deploy Flask app to cloud
 2. Set environment variables
-3. Point `BASE_URL` to your cloud URL
+3. Point `BASE_URL` to the cloud URL
 4. Test with sample calls
-
----
-
-## 🎬 Demo Video Recording (5 min)
-
-### What You Need
-
-- [ ] Smartphone (to receive calls)
-- [ ] Screen recording software (OBS, ScreenFlow, or built-in)
-- [ ] Headphones (to hear audio)
-- [ ] Quiet environment
-- [ ] Know your birthdate in DDMM format!
-
-### Recording Script
-
-```
-[0:00] INTRO (15 sec)
-  "Hi, I'm demonstrating the InspireWorks Plivo IVR system..."
-
-[0:15] MAKE CALL (30 sec)
-  - Show web UI at http://localhost:5000
-  - Enter phone number
-  - Click "Make Call"
-  - Show "call initiated" message
-
-[0:45] ANSWER & OTP WRONG (1 min)
-  - Answer phone
-  - Bot says "Enter OTP"
-  - You press 1234 (WRONG)
-  - Bot says "Incorrect, try again"
-
-[1:45] OTP CORRECT (30 sec)
-  - Bot prompts again
-  - You press your birthdate (e.g., 1503)
-  - Bot says "Verified, welcome!"
-
-[2:15] LANGUAGE SELECTION (30 sec)
-  - Bot asks for language
-  - Press 1 for English
-  - Bot confirms
-
-[2:45] AUDIO PLAYBACK (1.5 min)
-  - Bot says "Select: 1=audio, 2=transfer"
-  - Press 1
-  - Bot plays audio
-  - Audio completes, call ends
-
-[4:15] (OPTIONAL) CALL TRANSFER
-  - Make another call
-  - Go through OTP & language
-  - Press 2 for transfer
-  - Show call being transferred
-
-[5:00] CLOSING (optional)
-  "This system demonstrates OTP auth, multi-level IVR, 
-   and call routing using Plivo's Voice API."
-```
 
 ---
 
@@ -216,7 +159,7 @@ heroku config:set BASE_URL=https://your-app-name.herokuapp.com
   - [ ] `TESTING_GUIDE.md` (test scenarios)
 
 - [ ] **Configuration**
-  - [ ] OTP updated with your birthdate
+  - [ ] OTP updated with birthdate
   - [ ] BASE_URL updated with ngrok URL
   - [ ] Flask app running successfully
   - [ ] All dependencies installed
@@ -368,32 +311,3 @@ plivo-ivr/
 - [ ] README complete with instructions
 - [ ] Credentials stored securely (not in code)
 - [ ] No errors in logs
-
----
-
-## 🚀 You've Got This!
-
-This is a complete, production-ready IVR system. 
-
-**Next Steps:**
-1. ✏️ Update OTP with your birthdate
-2. 🌐 Start ngrok
-3. 🔄 Update BASE_URL  
-4. ▶️ Restart Flask
-5. 📞 Make test call
-6. 📹 Record demo
-7. 📤 Submit!
-
-**Questions?** Check the guides:
-- Quick start? → `QUICK_REFERENCE.md`
-- Detailed setup? → `SETUP_GUIDE.md`
-- Test scenarios? → `TESTING_GUIDE.md`
-- Full docs? → `README.md`
-
-Good luck! 🎊
-
----
-
-**Generated**: May 26, 2026
-**Status**: ✅ Ready for Deployment
-**Estimated Time to Submit**: 30-45 minutes
