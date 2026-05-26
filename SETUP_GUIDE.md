@@ -97,7 +97,7 @@ curl "http://localhost:5000/make_call?to=%2B91XXXXXXXXXX"
 #### 1️⃣ **Outbound Call**
 - Browser shows: `{"status": "call initiated", "request_uuid": "..."}`
 - **Your phone rings** in ~2–3 seconds
-- Origin: `+91 22 6423 2030` (Plivo number)
+- Origin: `+91 xxxxxxxxxx` (Plivo number)
 
 #### 2️⃣ **OTP Authentication**
 - Bot says: *"Welcome to InspireWorks. Please enter your 4 digit O T P to continue."*
@@ -125,7 +125,7 @@ curl "http://localhost:5000/make_call?to=%2B91XXXXXXXXXX"
   - **Call ends**
 - **Option B**: Press `2` (Transfer)
   - Bot says: *"Connecting you to a live associate. Please hold."*
-  - **Call transferred to**: `02264236412` (live associate placeholder)
+  - **Call transferred to**: live associate placeholder
   - If no one picks up, call ends
 
 #### 5️⃣ **Action Menu (Level 2) — Spanish**
@@ -379,14 +379,3 @@ AUDIO_URL = "https://your-public-audio-url.mp3"
 - **Python 3.8+**: https://www.python.org/
 
 ---
-
-## 🎉 You're Ready!
-
-1. Update your OTP
-2. Start ngrok
-3. Update BASE_URL
-4. Restart Flask
-5. Test the flow
-6. Record your demo
-
-Good luck! 🚀
