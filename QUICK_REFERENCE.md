@@ -162,50 +162,16 @@ plivo-ivr/
 | "No input received" | You took too long (10 sec timeout) |
 
 ---
-
+```
 ## ⏱️ Timeouts & Retries
 
 - **DTMF Input Timeout**: 10 seconds (wait for your input)
 - **Max Retries**: 1 (re-prompt once if wrong/no input)
 - **Call Duration**: ~2-3 min for full flow test
-
----
-
-## 🎯 Demo Video Talking Points
-
 ```
-✅ OTP Authentication: "The system prompts for a 4-digit PIN. 
-   If you enter the wrong one, it re-prompts. This adds security."
-
-✅ Multi-Level IVR: "After authentication, callers select their 
-   language and then choose an action: hear a message or 
-   speak to an associate."
-
-✅ Bilingual Support: "The bot speaks English and Spanish, 
-   with all prompts customized per language."
-
-✅ Call Routing: "Based on DTMF input, calls can play audio 
-   or be transferred to a live associate."
-
-✅ Error Handling: "Invalid inputs are handled gracefully 
-   without dropping the call."
-```
-
 ---
 
-## 🚀 Next Steps
 
-1. **Update OTP** in `app.py` line 20
-2. **Start ngrok** in separate terminal
-3. **Update BASE_URL** in `app.py` line 26
-4. **Restart Flask** (Ctrl+C, then `python app.py`)
-5. **Make test call** via web UI
-6. **Record demo** video
-7. **Submit** with code + README + video
-
----
-
-## 🆘 Support
 
 - **Flask Issues**: https://flask.palletsprojects.com/
 - **Plivo Issues**: https://www.plivo.com/docs/ (or check dashboard)
